@@ -1,0 +1,12 @@
+
+.cards{
+    margin: 0 10vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    padding: 0vw 1vw ;
+    margin: 0.5vw;
+    border: solid 1px #6d6d6d;
+}

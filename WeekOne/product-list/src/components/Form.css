@@ -1,0 +1,22 @@
+.form{
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+
+label{
+    color: #6d6d6d;
+    text-transform: capitalize;
+    padding: 0.5vw 0vw;
+    font-size: 1.2vw;
+    font-weight: 500;
+    text-align: right;
+
+}
+input{
+    color: #6d6d6d;
+    font-size: 1vw;
+    background-color: #15141b;
+    outline: 0;
+    border: solid 2px #6d6d6d;
+}

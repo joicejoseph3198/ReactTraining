@@ -1,0 +1,13 @@
+.btn-list{
+    display: inline-block;
+}
+
+button{
+    background-color: #a394f033;
+    margin: 1vw;
+}
+button:hover{
+    background-color: #61ffca;
+    color: #15141b;
+    
+}
