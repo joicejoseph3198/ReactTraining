@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import Button from "./Button";
 
-const ProductCard = ({ productObj, cartHandler}) => {
+const ProductCard = ({ productObj}) => {
   return (
     <div className="min-w-64 border-2 border-black snap-center hover:animate-pulse bg-white">
       <div className="flex flex-wrap flex-row p-5 gap-4 font-bold p-0">
       <div className="justify-self-center">
-            <Button product={productObj} clickHandler={cartHandler}/>
+            <Button product={productObj}/>
         </div>
         <div className="flex flex-col text-2xl p-2">
            <p>#{productObj?.id}</p>

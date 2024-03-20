@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import ProductCard from "./ProductCard";
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../redux/ProductSlice"
+
 
 const ProductListing = () => {
     const productList = useSelector(state => state.product)
@@ -19,7 +19,7 @@ const ProductListing = () => {
             </div> */}
             <div className="pt-5 flex flex-row overflow-x-scroll"> 
             {productList.map((productObject)=>(
-                <ProductCard key={productObject.id} productObj={productObject} cartHandler={handleCartOperation}/>))}
+                <ProductCard key={productObject.id} productObj={productObject}/>))}
         </div>
         </div>
         

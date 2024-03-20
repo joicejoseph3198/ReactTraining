@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
-import { useContext } from "react";
-import { ProductContext } from "./Dashboard";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
-  const {cartItems} = useContext(ProductContext);
+  const cartItems = useSelector(state => state.cart);
   // will fetch cart 
   if (cartItems.length > 0) {
     return (
