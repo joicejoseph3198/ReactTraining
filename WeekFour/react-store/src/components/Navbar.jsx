@@ -1,5 +1,8 @@
+import { useSelector } from "react-redux";
 import { Link} from "react-router-dom";
+
 const Navbar = () => {
+  const cartItemsCount = useSelector(state=> state.cart.cartItems.length);
   return (
     <div className="font-bold flex flex-row flex-wrap justify-between border-b-2 pb-5 border-black">
       <div>
@@ -10,6 +13,7 @@ const Navbar = () => {
           <li><Link to="">Home</Link></li>
           <li><Link to="products">Product Listing</Link></li>
           <li><Link to="cart">Cart</Link></li>
+          <li>| Items in cart: {cartItemsCount}</li>
         </ul>
       </nav>
     </div>

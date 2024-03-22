@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 
 const Cart = () => {
-  const cartItems = useSelector(state => state.cart);
+  const cartItems = useSelector(state => state.cart.cartItems);
   // will fetch cart 
   if (cartItems.length > 0) {
     return (
