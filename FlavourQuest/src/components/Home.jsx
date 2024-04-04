@@ -1,8 +1,9 @@
 import healthyFoodImg from "../assets/images/HealthyFood.gif"
-import MasonryGrid from "./MasonryGrid";
+import RecommendationList from "./RecommendationList";
 import Searchbar from "./SearchBar";
 
 const Home = () => {
+    console.log("Home Component")
     return(
         <div>
             <div className="flex flex-col md:flex-row justify-center items-center ">
@@ -14,7 +15,7 @@ const Home = () => {
                 </div>
                 <img className="w-2/4 md:w-1/4  object-contain" src= {healthyFoodImg} alt="Order Food" />
             </div>
-            <MasonryGrid/>
+            <RecommendationList/>
         </div>
         
     )

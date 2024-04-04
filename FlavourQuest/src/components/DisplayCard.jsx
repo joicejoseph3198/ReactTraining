@@ -1,15 +1,15 @@
 
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
 
 const DisplayCard = ({recipeObj}) => {
-    
-    const trimWord = str => str[0].toLowerCase().startsWith('the') ? str.substring(3): str;
-    // const title = trimWord(recipeObj.title);
-    // console.log(title);
-    // useEffect(() => {
-    //     // Update the document title with the current count
-    //     document.title = `Count: ${count}`;
-    //   });
+
+    const [trimmedTitle, setTrimmedTitle] = useState('');
+
+    useEffect(() => {
+        const trimWord = str => str[0].toLowerCase().startsWith('the') ? str.substring(3) : str;
+        setTrimmedTitle(trimWord(recipeObj.title));
+    }, [recipeObj.title]);
     
     return(
         <div className="h-auto max-w-screen-xl mx-auto p-1 ">
@@ -18,7 +18,7 @@ const DisplayCard = ({recipeObj}) => {
             <div className="relative -mt-16 px-5 pt-5 pb-5 bg-white m-5">
                 <a href="#"
                     className="font-semibold text-xl md:text-sm lg:text-md xl:text-xl inline-block hover:text-emerald-600 transition duration-500 ease-in-out inline-block mb-2">The
-                    {trimWord(recipeObj.title)}
+                    {trimmedTitle}
                 </a>
                 <p className="mt-5 text-gray-600 text-xs">
                     By : 

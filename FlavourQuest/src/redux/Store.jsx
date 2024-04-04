@@ -1,8 +1,12 @@
 import {configureStore} from "@reduxjs/toolkit";
-import GridSlice from "./slice/GridSlice";
+import RecommendationSlice from "./slice/RecommendationSlice";
+import SearchSlice from "./slice/SearchSlice";
+import DetailSlice from "./slice/DetailSlice";
 
 export const store = configureStore({
     reducer:{
-        grid: GridSlice,
+        recommendation: RecommendationSlice,
+        search: SearchSlice, 
+        details: DetailSlice
     }
 });
