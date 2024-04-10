@@ -2,6 +2,7 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
+{/* Currently NOT IN USE*/}
 const DisplayCard = ({recipeObj}) => {
 
     const [trimmedTitle, setTrimmedTitle] = useState('');

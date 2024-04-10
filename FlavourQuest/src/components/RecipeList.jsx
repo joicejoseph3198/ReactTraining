@@ -32,7 +32,7 @@ const RecipeList = () => {
     if(resultList.searchResult == []){
         return (
             <div>
-                No results found.
+                <p>No results found.</p>
             </div>
         );
     }

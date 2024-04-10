@@ -7,6 +7,6 @@ export const store = configureStore({
     reducer:{
         recommendation: RecommendationSlice,
         search: SearchSlice, 
-        details: DetailSlice
+        detail: DetailSlice
     }
 });

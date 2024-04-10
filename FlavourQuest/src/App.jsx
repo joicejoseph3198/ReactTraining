@@ -5,6 +5,7 @@ import { store } from './redux/Store';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home"
 import RecipeSearch from './components/RecipeSearch';
+import RecipeDetails from './components/RecipeDetails';
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
         path: "search",
         element: <RecipeSearch/>,
       },
+      {
+        path:"detail/:recipeId",
+        element: <RecipeDetails/>
+      }
     ],
   },
 ]);
