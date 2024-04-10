@@ -19,7 +19,6 @@ export const fetchInstruction = createAsyncThunk("detail/fetchInstruction", asyn
 export const fetchIngredients = createAsyncThunk("detail/fetchIngredients", async ({id}) => {
     const response = await fetch(`https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=${apiKey}`);
     const data =  await response.json();
-    console.log(data);
     return data;
 });
 
@@ -113,7 +112,7 @@ const detailSlice = createSlice({
          builder.addCase(fetchNutrients.fulfilled, (state,action)=>{
              state.nutrients.isError = false;
              state.nutrients.isLoading = false;
-             state.nutrients.data = [...action.payload];
+             state.nutrients.data = action.payload;
          });
           {/* INSTRUCTIONS API */}
         builder.addCase(fetchInstruction.rejected, (state)=>{

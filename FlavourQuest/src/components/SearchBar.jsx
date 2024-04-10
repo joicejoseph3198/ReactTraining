@@ -12,7 +12,7 @@ const SearchBar = () => {
     }
     
     return(
-        <div className="mt-10 mx-10 max-w-xl py-2 px-6 rounded-full bg-gray-50 border flex">
+        <div className="mt-10 max-w-xl py-2 px-6 rounded-full bg-gray-50 border flex">
             <input type="text" placeholder="Look for a recipe" value={searchTerm}
             onChange={e=>dispatch(updateSearchText(e.target.value))}
             className="bg-transparent w-full focus:outline-none pr-4  text-sm lg:text-xl font-semibold border-0 " 

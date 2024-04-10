@@ -1,6 +1,4 @@
 import { MdArrowOutward } from "react-icons/md";
-import { MdArrowBackIos } from "react-icons/md";
-import { MdArrowForwardIos } from "react-icons/md";
 import Pagination from "./Pagination";
 import { Link } from "react-router-dom";
 
@@ -23,8 +21,6 @@ const List = ({resultList, listTitle}) => {
                                          {result.title}
                                     </li>
                                     <li className="flex-wrap px-2 ml-auto">
-                                        {/* <button className="px-2"><MdFavoriteBorder/></button>
-                                        <button className="px-2"><MdContentPasteGo /></button> */}
                                         <button className="px-2"><Link to={`/detail/${result.id}`}><MdArrowOutward/></Link></button>
                                     </li>
                                 </div>
