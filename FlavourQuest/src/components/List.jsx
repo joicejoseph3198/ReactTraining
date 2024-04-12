@@ -9,7 +9,7 @@ const List = ({resultList, listTitle}) => {
                 <div>
                     <p className="p-5 pb-10 text-lg sm:text-md md:text-6xl text-left font-bold w-1/4">{listTitle}</p>
                 </div>
-                <div className="text-sm md:text-5xl">
+                <div className="text-sm md:text-4xl">
                     <ul className="p-10 pb-10 text-left font-bold">
                         {
                         resultList.map((result,index) => {

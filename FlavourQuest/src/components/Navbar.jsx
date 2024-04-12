@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div className="flex flex-row flex-wrap justify-between border-b-2 pb-2 border-black text-sm md:text-xl">
+        <div className="flex flex-row flex-wrap justify-between border-b-2 pb-2 border-black text-sm">
         <div>
           <div className="font-bold"> FlavourQuest </div>
         </div>

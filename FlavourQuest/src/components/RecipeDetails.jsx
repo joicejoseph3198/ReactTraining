@@ -649,7 +649,6 @@ const RecipeDetails = () => {
                 return `${number}. ${step}`;
             }));
 
-    console.log(instructionList);
 
     return(
         <div className="h-auto pb-10">
@@ -657,14 +656,14 @@ const RecipeDetails = () => {
                 <p className="uppercase text-6xl text-left p-5 font-bold">
                     {basicDetails?.title}
                 </p>
-                <p className="text-right text-3xl">
+                <p className="text-right text-3xl p-1">
                     Learn More
                 </p>
             </div>
             <div className="w-full flex flex-col lg:flex-row justify-center items-center text-xl xl:text-4xl lg:justify-evenly">
                 <div>
                     <ul >
-                        <li className="flex items-center justify-center py-5"> <IoMdTime /> : {basicDetails?.readyInMinutes} </li>
+                        <li className="flex items-center justify-center py-5"> <IoMdTime /> : {basicDetails?.readyInMinutes} min </li>
                         <li className={basicDetails?.vegetarian === true? 'text-emerald-600 capitalize font-bold': 'text-transparent/25 capitalize line-through'}> vegetarian</li>
                         <li className={basicDetails?.vegan === true? 'text-emerald-600 capitalize font-bold': 'text-transparent/25 capitalize line-through'}> vegan</li>
                         <li className={basicDetails?.ketogenic === true? 'text-emerald-600 capitalize font-bold': 'text-transparent/25 capitalize line-through'}> ketogenic</li>
