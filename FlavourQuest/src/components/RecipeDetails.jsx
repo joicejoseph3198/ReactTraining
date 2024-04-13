@@ -7,6 +7,7 @@ import AccordianContainer from "./AccordianContainer";
 import { IoMdHeartEmpty } from "react-icons/io";
 import List from "./List";
 import findRecipeImg from "../assets/images/FindRecipe.gif";
+import { addToFav } from "../redux/slice/FavouriteSlice";
 
 const RecipeDetails = () => {
 
@@ -674,7 +675,7 @@ const RecipeDetails = () => {
                             <button className="flex flex-row items-center justify-center px-4 rounded-full text-sm bg-black text-white border-transparent py-1.5 h-[38px]">
                             Add to Meal Plan
                             </button>
-                            <button className="text-2xl flex items-center justify-center px-4"><IoMdHeartEmpty /></button>
+                            <button className="text-2xl flex items-center justify-center px-4" onClick={()=>dispatch(addToFav({id: recipeId,title: basicDetails?.title}))}><IoMdHeartEmpty /></button>
                             </div>
                         </li>                        
                     </ul>

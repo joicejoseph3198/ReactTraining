@@ -1,9 +1,13 @@
 import { MdArrowOutward } from "react-icons/md";
 import Pagination from "./Pagination";
 import { Link } from "react-router-dom";
+import { IoMdHeartEmpty } from "react-icons/io";
+import { useDispatch} from "react-redux";
+import { addToFav } from "../redux/slice/FavouriteSlice";
 
 
 const List = ({resultList, listTitle}) => {
+    const dispatch = useDispatch();
     return(
         <div id="searchresult" className="flex flex-start flex-col items-left justify-center rounded-lg bg-green-500 m-10 h-full width-3/4 md:w-11/12 text-transparent/50">
                 <div>
@@ -20,7 +24,8 @@ const List = ({resultList, listTitle}) => {
                                     <li className="text-transparent/75 w-3/4">
                                          {result.title}
                                     </li>
-                                    <li className="flex-wrap px-2 ml-auto">
+                                    <li className="flex px-2 ml-auto">
+                                        <button onClick={()=>dispatch(addToFav({id: result?.id, title: result?.title}))}><IoMdHeartEmpty/></button>
                                         <button className="px-2"><Link to={`/detail/${result.id}`}><MdArrowOutward/></Link></button>
                                     </li>
                                 </div>
