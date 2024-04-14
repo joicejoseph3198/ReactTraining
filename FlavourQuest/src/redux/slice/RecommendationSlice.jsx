@@ -29,7 +29,6 @@ const recommendationSlice = createSlice({
         builder.addCase(fetchRecipe.fulfilled, (state,action)=>{
             console.log(state);
             state.isLoading = false;
-            console.log(action.payload)
             state.data = [...action.payload];
         });
     }

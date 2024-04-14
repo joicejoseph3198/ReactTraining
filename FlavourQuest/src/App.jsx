@@ -7,6 +7,7 @@ import Home from "./components/Home"
 import RecipeSearch from './components/RecipeSearch';
 import RecipeDetails from './components/RecipeDetails';
 import Favourite from './components/Favourite';
+import { AnimatePresence } from 'framer-motion';
 
 
 const router = createBrowserRouter([
@@ -37,7 +38,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <Provider store={store}>
+      <AnimatePresence mode='wait'>
       <RouterProvider router={router}/>
+      </AnimatePresence>
     </Provider>
   )
 }

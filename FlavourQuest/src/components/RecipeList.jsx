@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import Loader from "./Loader";
 import List from "./List";
 import { useEffect } from "react";
+import errorImg from "../assets/images/ErrorImg.png"
 
 const RecipeList = () => {  
     const resultList = useSelector(state => state.search);
@@ -12,6 +13,15 @@ const RecipeList = () => {
             element.scrollIntoView({ behavior: 'smooth'});
         }
     },[resultList.searchResult]);
+    
+    if(resultList.isError){
+        return(
+            <div className="flex justify-center items-center">
+            <img className=" w-full md:w-2/4 object-contain" src= {errorImg} alt="Error..." />
+        </div>
+        )
+    }
+
     
     if(resultList.isLoading == true){
         return(

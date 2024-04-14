@@ -1,25 +1,20 @@
 import {createSlice } from "@reduxjs/toolkit";
 
-// apiKey from .env file
-const apiKey = import.meta.env.VITE_SPOONACULAR_API_KEY
-
 
 const favouriteSlice = createSlice({
     name: "favourite",
     initialState: {
         data: [],
-        buttonStatus: false
     },
     reducers:{
         addToFav:(state,action) => {
-            console.log("AddtoFav called")
-            if(state.data.indexOf(action.payload == -1)){
-                console.log("adding to list",action.payload);
+            const foundIndex = state.data.findIndex(item => item.id === action.payload.id && item.title === action.payload.title);
+            if(foundIndex== -1){
                 state.data.push(action.payload);
             }
         },
         removeFromFav: (state,action) => {
-            state.data = [...state.data.filter(recipeId => recipeId !== action.payload.id)];
+            state.data = [...state.data.filter(item => item.id !== action.payload)];
         } 
     },
 });

@@ -1,14 +1,20 @@
 import { useDispatch, useSelector } from "react-redux";
 import { filterRecipe, updateCurrentSearchTerm, updateSearchText } from "../redux/slice/SearchSlice";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
     const searchTerm = useSelector(state => state.search.searchText);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     
     const buttonClickHandler = () =>{
         dispatch(updateCurrentSearchTerm(searchTerm));
         dispatch(filterRecipe({searchTerm}))
         dispatch(updateSearchText(''));
+        
+        // Navigate to RecipeSearch component
+        navigate('/search');
+        
     }
     
     return(

@@ -18,8 +18,8 @@ const RecommendationList = () =>{
 
     if(recipes.isError){
         return(
-            <div>
-            <img className="w-full md:w-2/4 object-center object-contain" src= {errorImg} alt="Error..." />
+            <div className="flex justify-center items-center">
+            <img className=" w-full md:w-2/4 object-contain" src= {errorImg} alt="Error..." />
         </div>
         )
     }

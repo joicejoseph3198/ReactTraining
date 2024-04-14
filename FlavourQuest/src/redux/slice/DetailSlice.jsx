@@ -124,7 +124,7 @@ const detailSlice = createSlice({
          builder.addCase(fetchInstruction.fulfilled, (state,action)=>{
              state.instructions.isError = false;
              state.instructions.isLoading = false;
-             state.instructions.data = [...action.payload];
+             state.instructions.data = action.payload;
          });
     }
 });

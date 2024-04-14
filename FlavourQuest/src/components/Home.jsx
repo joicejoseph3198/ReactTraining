@@ -1,6 +1,7 @@
 import healthyFoodImg from "../assets/images/HealthyFood.gif"
 import RecommendationList from "./RecommendationList";
 import Searchbar from "./SearchBar";
+import transition from "../transition";
 
 const Home = () => {
     return(
@@ -23,4 +24,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default transition(Home);

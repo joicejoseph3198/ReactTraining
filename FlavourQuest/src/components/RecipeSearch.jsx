@@ -1,7 +1,7 @@
-import { useSelector } from "react-redux";
 import foodSearch from "../assets/images/FoodSearch.gif"
 import RecipeList from "./RecipeList";
 import SearchBar from "./SearchBar";
+import transition from "../transition";
 
 const RecipeSearch = () =>{
     return(
@@ -24,4 +24,4 @@ const RecipeSearch = () =>{
        </>
     )
 }
-export default RecipeSearch;
+export default transition(RecipeSearch);

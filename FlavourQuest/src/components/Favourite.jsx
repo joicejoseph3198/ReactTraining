@@ -1,5 +1,6 @@
 import Background from "./Background";
 import Foreground from "./Foreground";
+import transition from "../transition";
 
 const Favourite = () => {
     return (
@@ -10,4 +11,4 @@ const Favourite = () => {
     )
 }
 
-export default Favourite;
+export default transition(Favourite);

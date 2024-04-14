@@ -11,7 +11,6 @@ const Navbar = () => {
           <ul className="flex flex-wrap flex-row gap-2 content-center color-black">
             <li><Link to="">Home</Link> </li>
             <li><Link to="search">Find Recipes</Link></li>
-            <li>Curate Your Meal Plan </li>
             <li><Link to="favourites">Favourites </Link></li>
           </ul>
         </nav>

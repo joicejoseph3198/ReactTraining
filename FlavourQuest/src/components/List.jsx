@@ -25,8 +25,8 @@ const List = ({resultList, listTitle}) => {
                                          {result.title}
                                     </li>
                                     <li className="flex px-2 ml-auto">
-                                        <button onClick={()=>dispatch(addToFav({id: result?.id, title: result?.title}))}><IoMdHeartEmpty/></button>
-                                        <button className="px-2"><Link to={`/detail/${result.id}`}><MdArrowOutward/></Link></button>
+                                        <button title="Add to Favourite" className="hover:text-transparent/75" onClick={()=>dispatch(addToFav({id: result?.id, title: result?.title}))}><IoMdHeartEmpty/></button>
+                                        <button title="View Details" className="px-2 hover:text-transparent/75"><Link to={`/detail/${result.id}`}><MdArrowOutward/></Link></button>
                                     </li>
                                 </div>
                                 </>
@@ -35,7 +35,7 @@ const List = ({resultList, listTitle}) => {
                         }
                     </ul>
                 </div>
-                {listTitle !="Recipes You May Like" && <Pagination />}
+                {listTitle == "Here's what we got" && <Pagination />}
         </div>
     )
 }

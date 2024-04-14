@@ -4,7 +4,7 @@ const AccordianItem = ({title,content}) => {
     const [accordionOpen, setAccordionOpen] = useState(false);
     return(
         <div className="flex flex-col text-wrap border-black border-b-2 p-2">
-            <button className="flex justify-between font-bold"
+            <button className="flex justify-between text-3xl"
              onClick={() => setAccordionOpen(!accordionOpen)}
              > 
                 <span>{title}</span>
@@ -17,7 +17,7 @@ const AccordianItem = ({title,content}) => {
                   : "max-h-0 opacity-0"
               }`}
             >
-                <div className="flex flex-wrap gap-5 bg-gray-100/50">
+                <div className="flex flex-wrap flex-col gap-5 bg-gray-100/50 p-5">
                     {content?.map(element => {
                     return(
                     <>
